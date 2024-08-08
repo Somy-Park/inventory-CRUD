@@ -167,7 +167,7 @@ export default function Home() {
           justifyContent="center"
           alignItems="center"
         > 
-          <Typography variant = "h3" borderRadius={3}>{session?.data?.user?.name}'s Inventory</Typography>
+          <Typography variant = "h3" borderRadius={3}>{session?.data?.user?.name}&apos;s Inventory</Typography>
         </Box>
         {/* Search bar box */}
         <Box
@@ -212,6 +212,7 @@ export default function Home() {
         <Stack direction ="column" overflow = "auto" width = "800px" height = "300px" spacing= {1}>
           {displayList.map(({name, quantity}) => ( 
             <Box 
+              key = {name}
               border ="1px solid #333" 
               borderRadius={3}
               width = "100%"
